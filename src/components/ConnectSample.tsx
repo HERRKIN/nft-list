@@ -1,5 +1,5 @@
 import { useWallet, WalletStatus } from '@terra-money/wallet-provider';
-import React from 'react';
+import React, { useState } from 'react';
 
 export function ConnectSample() {
   const {
@@ -13,50 +13,44 @@ export function ConnectSample() {
     disconnect,
   } = useWallet();
 
-  return (
-    <div>
-      <h1>Connect Sample</h1>
-      <section>
-        <pre>
-          {JSON.stringify(
-            {
-              status,
-              network,
-              wallets,
-              availableConnectTypes,
-              availableInstallTypes,
-            },
-            null,
-            2,
-          )}
-        </pre>
-      </section>
+  const [show, setShow] = useState(false)
 
-      <footer>
-        {status === WalletStatus.WALLET_NOT_CONNECTED && (
-          <>
-            {availableInstallTypes.map((connectType) => (
-              <button
-                key={'install-' + connectType}
-                onClick={() => install(connectType)}
-              >
-                Install {connectType}
-              </button>
-            ))}
-            {availableConnectTypes.map((connectType) => (
-              <button
-                key={'connect-' + connectType}
-                onClick={() => connect(connectType)}
-              >
-                Connect {connectType}
-              </button>
-            ))}
-          </>
-        )}
-        {status === WalletStatus.WALLET_CONNECTED && (
-          <button onClick={() => disconnect()}>Disconnect</button>
-        )}
-      </footer>
-    </div>
+  return (
+    <header>
+      <button className="dev-button" 
+      onClick={()=>setShow(!show)}
+      >
+        Connect Wallet
+      </button>
+      {show && 
+        <div className="login-wallet">
+          {status === WalletStatus.WALLET_NOT_CONNECTED && (
+            <>
+              {availableInstallTypes.map((connectType) => (
+                <button
+                className="dev-button"
+                  key={'install-' + connectType}
+                  onClick={() => install(connectType)}
+                >
+                  Install Terra Station
+                </button>
+              ))}
+              {availableConnectTypes.map((connectType) => (
+                <button
+                className="dev-button"
+                  key={'connect-' + connectType}
+                  onClick={() => connect(connectType)}
+                >
+                  {connectType}
+                </button>
+              ))}
+            </>
+          )}
+          {status === WalletStatus.WALLET_CONNECTED && (
+            <button className="dev-button logout" onClick={() => disconnect()}>Disconnect</button>
+          )}
+        </div>
+      }
+    </header>
   );
 }

@@ -3,10 +3,10 @@ import { ConnectSample } from 'components/ConnectSample';
 import { QuerySample } from 'components/QuerySample';
 import { SignSample } from 'components/SignSample';
 import { TxSample } from 'components/TxSample';
-import SingleNFT  from 'components/singleNFT/SingleNFT';
+// import SingleNFT  from 'components/singleNFT/SingleNFT';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
+import './style.scss';
 import NFTList from 'components/NFTList/NFTList';
 
 function App() {

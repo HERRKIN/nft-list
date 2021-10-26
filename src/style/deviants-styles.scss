@@ -1,0 +1,43 @@
+@import "media-query.scss";
+@import "typography.scss";
+@import "variables.scss";
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 16px;
+    display: grid;
+    justify-content: flex-end;
+    .login-wallet{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 250px;
+        height: auto;
+        padding: 16px 32px;
+        border-radius: 16px;
+        border: 1px solid $color-primary-orange;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        margin-top: 16px;
+        background: $color-background;
+        .dev-button{
+            max-width: 200px;
+            margin: 8px;
+        }
+    }
+    .dev-button{
+        border: 1px solid $color-primary-orange;
+        border-radius: 16px;
+        padding: 8px;
+        background: $color-background;
+        color: $color-primary-white;
+        max-width: 128px;
+        &.logout{
+            background: red;
+            border: none;
+        }
+    }
+}

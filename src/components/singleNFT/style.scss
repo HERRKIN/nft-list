@@ -1,24 +1,22 @@
+@import "../../style/deviants-styles.scss";
+
 .nft_card{
- display: flex;
- flex-direction: column;
- background: rgba(228, 242, 248, 0.8);
- border-radius: 24px;
- flex: 0 0 48%;
+    display: grid;
+    flex-direction: column;
+    background: rgba(218, 237, 245, 0.507);
+    border-radius: 24px;
+    max-width: 300px;
+    justify-self: center;
 }
-@media (min-width: 425px) {
-    .nft_card{
-        flex: 0 0 24%;
-    }
-    
- }
+
 .nft_card .nft_image{
     width: 100%;
     height: auto;
     border-radius: 24px;
 }
 .nft_info{
- padding: 8px;
- margin-bottom: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
 }
 .nft_card .nft_info .nft_title{
     font-size: 14px;

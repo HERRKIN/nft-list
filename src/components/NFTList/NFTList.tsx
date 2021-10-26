@@ -4,12 +4,8 @@ import React, {useMemo, useEffect, useState } from 'react'
 import SingleNFT  from 'components/singleNFT/SingleNFT';
 import { useConnectedWallet, ConnectedWallet } from '@terra-money/wallet-provider';
 import { LCDClient, Wallet, WasmAPI } from '@terra-money/terra.js';
-import "./style.css"
+import "./style.scss"
 
-// type NFTListT ={
-//   // nftItem: any;
-
-// }
 const NFTList = () : JSX.Element =>{
   const connectedWallet = useConnectedWallet();
   const [list, setList] = useState([])

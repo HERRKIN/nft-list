@@ -1,6 +1,10 @@
+@import "style/deviants-styles.scss";
+
 html,
 body {
   margin: 0;
+  background: $color-background;
+  color: #fff;
 }
 
 html {
@@ -13,6 +17,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
+  
 }
 
 *,
@@ -22,4 +27,5 @@ html {
   margin: 0;
   font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
 }

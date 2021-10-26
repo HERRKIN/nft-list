@@ -1,6 +1,6 @@
 
 import PropTypes from "prop-types";
-import "./style.css"
+import "./style.scss"
 
 type SingleNFTT ={
   nftImage: string,

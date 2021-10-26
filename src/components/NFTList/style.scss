@@ -1,0 +1,13 @@
+@import "../../style/deviants-styles.scss";
+
+.nft_list{
+    display: grid;
+    grid-gap: 16px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(10em,1fr));
+    box-sizing: border-box;
+    @include media-large{
+        width: 960px;
+        align-self: center;
+    }
+}
